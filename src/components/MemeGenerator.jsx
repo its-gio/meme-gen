@@ -34,6 +34,7 @@ class MemeGenerator extends Component {
       <div className="generator">
         <form className="generator__form">
           <input
+            className="generator__form--top-text"
             name="topText"
             onChange={this.textChange}
             value={this.state.topText}
@@ -41,13 +42,14 @@ class MemeGenerator extends Component {
             placeholder="Top Text"
           />
           <input
+            className="generator__form--bottom-text"
             name="bottomText"
             onChange={this.textChange}
             value={this.state.BottomText}
             type="text"
             placeholder="Bottom Text"
           />
-          <button>Generate!</button>
+          <button className="generator__form--button">Generate!</button>
         </form>
         <div className="generator__content-container">
           <img
