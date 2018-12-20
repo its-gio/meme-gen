@@ -1,0 +1,28 @@
+.generator {
+  text-align: center;
+
+  &__form {
+    margin: 10px 0;
+  }
+
+  &__content-container {
+    position: relative;
+    display: inline-flex;
+
+    &--top-text {
+      top: 0;
+    }
+
+    &--bottom-text {
+      bottom: 0;
+    }
+
+    &--top-text,
+    &--bottom-text {
+      width: 90%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
