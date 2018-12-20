@@ -1,0 +1,20 @@
+.header {
+  background: purple;
+  display: flex;
+
+  &__image-container {
+    flex: 1;
+    text-align: right;
+
+    &--image {
+      width: 25%;
+      margin: 10px;
+    }
+  }
+
+  &__tagline {
+    font-family: monospace;
+    flex: 3;
+    color: #fff;
+  }
+}
