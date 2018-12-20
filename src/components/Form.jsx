@@ -1,21 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
 
-function Form() {
+function Form(props) {
   return (
     <form className="generator__form">
       <input
         className="generator__form--top-text"
         name="topText"
-        onChange={this.props.textChange}
-        value={this.props.topText}
+        onChange={props.textChange}
+        value={props.topText}
         type="text"
         placeholder="Top Text"
       />
       <input
         className="generator__form--bottom-text"
         name="bottomText"
-        onChange={this.props.textChange}
-        value={this.props.BottomText}
+        onChange={props.textChange}
+        value={props.BottomText}
         type="text"
         placeholder="Bottom Text"
       />
