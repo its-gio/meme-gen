@@ -1,5 +1,6 @@
 @import "./styles/Header.scss";
-@import "./styles/Content-Container.scss";
+@import "./styles/Form.scss";
+@import "./styles/ContentContainer.scss";
 
 * {
   box-sizing: border-box;
@@ -8,4 +9,8 @@
 html,
 body {
   margin: 0;
+}
+
+.generator {
+  text-align: center;
 }
