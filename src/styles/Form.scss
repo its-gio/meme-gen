@@ -1,5 +1,23 @@
-.generator {
-  &__form {
-    margin: 10px 0;
+.form {
+  margin: 10px 0;
+
+  &--top-text,
+  &--bottom-text {
+    margin: 2px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &--button {
+    border: none;
+    background: burlywood;
+    color: #fff;
+    user-select: none;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

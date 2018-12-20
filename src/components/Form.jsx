@@ -2,24 +2,29 @@ import React from "react";
 
 function Form(props) {
   return (
-    <form className="generator__form">
+    <form className="form">
       <input
-        className="generator__form--top-text"
+        className="form__top-text"
         name="topText"
         onChange={props.textChange}
         value={props.topText}
         type="text"
-        placeholder="Top Text"
       />
+      <label className="form__top-text--label" htmlFor="topText">
+        Top Text
+      </label>
       <input
-        className="generator__form--bottom-text"
+        className="form__bottom-text"
         name="bottomText"
         onChange={props.textChange}
         value={props.BottomText}
         type="text"
         placeholder="Bottom Text"
       />
-      <button className="generator__form--button">Generate!</button>
+      <label className="form__bottom-text--label" htmlFor="bottomText">
+        Bottom Text
+      </label>
+      <button className="form__button">Generate!</button>
     </form>
   );
 }

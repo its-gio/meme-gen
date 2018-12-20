@@ -1,22 +1,20 @@
-.generator {
-  &__content-container {
-    position: relative;
-    display: inline-flex;
+.content-container {
+  position: relative;
+  display: inline-flex;
 
-    &--top-text {
-      top: 0;
-    }
+  &__top-text {
+    top: 0;
+  }
 
-    &--bottom-text {
-      bottom: 0;
-    }
+  &__bottom-text {
+    bottom: 0;
+  }
 
-    &--top-text,
-    &--bottom-text {
-      width: 90%;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  &__top-text,
+  &__bottom-text {
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
