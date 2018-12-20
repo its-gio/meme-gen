@@ -1,12 +1,40 @@
 .form {
-  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0 10px 0;
 
   &__top-text,
   &__bottom-text {
-    margin: 2px;
+    display: block;
+    position: relative;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    margin: 0 auto;
+    z-index: 2;
 
-    &:focus {
+    &--label {
+      color: #999;
+      display: block;
+      position: relative;
+      top: -20px;
+      left: 0;
+      text-align: left;
+      z-index: 1;
+      transition: all 0.5s ease;
+    }
+
+    &:focus,
+    &:valid {
       outline: none;
+      border-bottom: 1px solid lighten(#273648, 50%);
+    }
+
+    &:focus + &--label,
+    &:valid + &--label {
+      top: -35px;
+      font-size: 11px;
+      color: #000;
     }
   }
 
