@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import Form from "./Form";
+
 class MemeGenerator extends Component {
   constructor() {
     super();
@@ -32,25 +34,7 @@ class MemeGenerator extends Component {
   render() {
     return (
       <div className="generator">
-        <form className="generator__form">
-          <input
-            className="generator__form--top-text"
-            name="topText"
-            onChange={this.textChange}
-            value={this.state.topText}
-            type="text"
-            placeholder="Top Text"
-          />
-          <input
-            className="generator__form--bottom-text"
-            name="bottomText"
-            onChange={this.textChange}
-            value={this.state.BottomText}
-            type="text"
-            placeholder="Bottom Text"
-          />
-          <button className="generator__form--button">Generate!</button>
-        </form>
+        <Form textChange={this.textChange} {...this.state} />
         <div className="generator__content-container">
           <img
             className="generator__content-container--image"
