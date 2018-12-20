@@ -7,8 +7,18 @@ class MemeGenerator extends Component {
     this.state = {
       topText: "",
       bottomText: "",
-      img: "http://i.imgflip.com/1bij.jpg"
+      img: "http://i.imgflip.com/1bij.jpg",
+      allMemeImgs: []
     };
+  }
+
+  componentDidMount() {
+    fetch("https://api.imgflip.com/get_memes")
+      .then(blob => blob.json())
+      .then(response => {
+        const { memes } = response.data;
+        this.setState({ allMemeImgs: memes });
+      });
   }
 
   render() {
