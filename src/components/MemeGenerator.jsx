@@ -4,19 +4,12 @@ import Form from "./Form";
 import ContentContainer from "./ContentContainer";
 
 class MemeGenerator extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      topText: "",
-      bottomText: "",
-      randomImg: "http://i.imgflip.com/1bij.jpg",
-      allMemeImgs: []
-    };
-
-    this.textChange = this.textChange.bind(this);
-    this.generateImage = this.generateImage.bind(this);
-  }
+  state = {
+    topText: "",
+    bottomText: "",
+    randomImg: "http://i.imgflip.com/1bij.jpg",
+    allMemeImgs: []
+  };
 
   componentDidMount() {
     fetch("https://api.imgflip.com/get_memes")
@@ -27,17 +20,17 @@ class MemeGenerator extends Component {
       });
   }
 
-  textChange(e) {
+  textChange = e => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
-  }
+  };
 
-  generateImage(e) {
+  generateImage = e => {
     e.preventDefault();
     const num = Math.floor(Math.random() * this.state.allMemeImgs.length);
     const newRandomImg = this.state.allMemeImgs[num].url;
     this.setState({ randomImg: newRandomImg });
-  }
+  };
 
   render() {
     return (
