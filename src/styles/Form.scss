@@ -3,6 +3,10 @@
   justify-content: space-around;
   padding: 20px 0 10px 0;
 
+  &__text-container {
+    height: 20px;
+  }
+
   &__top-text,
   &__bottom-text {
     display: block;
@@ -40,6 +44,7 @@
 
   &__button {
     border: none;
+    padding: 10px;
     background: burlywood;
     color: #fff;
     user-select: none;
