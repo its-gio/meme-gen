@@ -15,6 +15,7 @@ class MemeGenerator extends Component {
     };
 
     this.textChange = this.textChange.bind(this);
+    this.generateImage = this.generateImage.bind(this);
   }
 
   componentDidMount() {
@@ -23,7 +24,6 @@ class MemeGenerator extends Component {
       .then(response => {
         const { memes } = response.data;
         this.setState({ allMemeImgs: memes });
-        console.log(this.state.allMemeImgs);
       });
   }
 
@@ -32,10 +32,21 @@ class MemeGenerator extends Component {
     this.setState({ [name]: value });
   }
 
+  generateImage(e) {
+    e.preventDefault();
+    const num = Math.floor(Math.random() * this.state.allMemeImgs.length);
+    const newRandomImg = this.state.allMemeImgs[num].url;
+    this.setState({ randomImg: newRandomImg });
+  }
+
   render() {
     return (
       <div className="generator">
-        <Form textChange={this.textChange} {...this.state} />
+        <Form
+          textChange={this.textChange}
+          generateImage={this.generateImage}
+          {...this.state}
+        />
         <ContentContainer {...this.state} />
       </div>
     );

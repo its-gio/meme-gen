@@ -2,7 +2,7 @@ import React from "react";
 
 function Form(props) {
   return (
-    <form className="form">
+    <form className="form" onSubmit={props.generateImage}>
       <div className="form__text-container">
         <input
           className="form__top-text"
