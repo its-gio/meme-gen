@@ -7,6 +7,7 @@ class MemeGenerator extends Component {
   state = {
     topText: "",
     bottomText: "",
+    color: "#000000",
     randomImg: "",
     allMemeImgs: []
   };

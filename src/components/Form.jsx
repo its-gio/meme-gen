@@ -29,6 +29,12 @@ function Form(props) {
           Bottom Text
         </label>
       </div>
+      <input
+        type="color"
+        name="color"
+        value={props.color}
+        onChange={props.textChange}
+      />
       <button className="form__button">Generate!</button>
     </form>
   );
